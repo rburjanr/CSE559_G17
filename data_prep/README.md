@@ -1,4 +1,4 @@
-## Zichen - E3-substrate data validation 
+# Data preparation and validation (Zichen Zhao) 
 
 ## Recommended evaluation input
 `evaluation_ready_pairs_2994.csv` contains the 2,994 mentor-confirmed Known pairs whose E3 is marked `Yes` in the 679-E3 roster. This is the conservative evaluation-ready table for downstream nearest-neighbor scoring.
@@ -16,6 +16,8 @@
 - `extra_53_pairs_review.csv`: discrepancy table with reason categories.
 - `crosscheck_summary.csv`: counts for reporting.
 
-### Suggested Milestone 3 wording
-We integrated the raw UbiBrowser known E3-substrate records with the UbiNet archive, restricted the data to human records, standardized accession fields, and deduplicated E3-substrate accession pairs. This yielded 3,163 unique pairs. Cross-checking against the mentor-provided workbook recovered all 3,110 curated known pairs. 
-We identified 53 additional raw-derived pairs and retained them for discrepancy review rather than silently adding them to the primary evaluation set. For downstream nearest-neighbor evaluation, we use the 2,994 mentor-confirmed pairs whose E3 is explicitly marked as present in the 679-member E3-ome roster.
+## Follow-up check (added from the alignment arm)
+Matching the 20 plausible extras against UbiNet's organism fields: 16 have non-human substrates (viral, bacterial or yeast, e.g. HPV E7, HBV P, HIV tat), 1 is human (WWP1-EGFR, P00533), and 3 could not be verified from the provided files. This supports keeping them out of the primary evaluation set.
+
+## Running the script
+`build_e3_substrate_table.py` currently reads from hard-coded `/mnt/data/...` paths with download-style filenames; edit the `RAW`, `UBINET` and `CUR` paths at the top to point at the mentor files before running.

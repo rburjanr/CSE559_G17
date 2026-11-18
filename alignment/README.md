@@ -1,4 +1,4 @@
-# E3 substrate recognition: sequence-alignment arm (Project 2)
+# E3 substrate recognition: sequence-alignment arm (Rahul Burjanroppa)
 
 Smith-Waterman similarity between 678 human E3-ome proteins, evaluated by whether
 nearest-neighbor E3s share documented substrates. This directory holds the alignment
