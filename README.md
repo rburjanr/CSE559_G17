@@ -1,9 +1,4 @@
-# Project 2: E3 Ubiquitin-Ligase Substrate Recognition: What Do Different Representations Capture?
-## CSE 559 - G17
-Our main question is to determine which E3 representation (sequence alignment, ESM-2 embeddings, or whole-protein domain Jaccard) best identifies E3s that share substrates closest together, and whether this reflects substrate recognition or just E3 class and family. For each human E3 with a known substrate, we rank all other E3s by similarity and check how often the closest ones share a substrate, compared with a shuffled baseline. As an extension, we repeat this using only the catalytic and recognition regions of each protein.
-
-## Zichen's Progress
-# Zichen Zhao - E3-substrate data validation 
+## E3-substrate data validation 
 
 ## Recommended evaluation input
 `evaluation_ready_pairs_2994.csv` contains the 2,994 mentor-confirmed Known pairs whose E3 is marked `Yes` in the 679-E3 roster. This is the conservative evaluation-ready table for downstream nearest-neighbor scoring.
