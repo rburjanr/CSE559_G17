@@ -1,0 +1,11 @@
+metric,value
+Merged unique human pairs from raw UbiBrowser + UbiNet,3163
+Mentor Known pairs,3110
+Mentor Known pairs found in merged raw set,3110
+Raw merged pairs absent from mentor Known pairs,53
+Extra pairs: E3 accession not a single accession in roster,29
+Extra pairs: missing substrate accession,4
+Extra pairs: valid roster E3 + substrate but absent from mentor Known pairs,20
+Evaluation-ready mentor pairs (E3 in roster = Yes),2994
+Unique E3 accessions in evaluation-ready set,374
+Unique substrate accessions in evaluation-ready set,1634
