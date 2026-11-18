@@ -1,4 +1,4 @@
-## E3-substrate data validation 
+## Zichen - E3-substrate data validation 
 
 ## Recommended evaluation input
 `evaluation_ready_pairs_2994.csv` contains the 2,994 mentor-confirmed Known pairs whose E3 is marked `Yes` in the 679-E3 roster. This is the conservative evaluation-ready table for downstream nearest-neighbor scoring.
