@@ -21,6 +21,7 @@ python src/build_pairs.py          # raw UbiBrowser+UbiNet -> deduplicated human
 python src/align_all.py            # all-vs-all Smith-Waterman (14 s on 2 cores) -> results/sw_*.npy, e3_index.csv
 python src/evaluate_sw.py          # neighbors vs substrate sharing; shuffles; paralog / heavily-studied controls
 python src/evaluate_degree_null.py # popularity-controlled null (shuffle within substrate-count bins)
+python src/extra_analyses.py       # popularity/length baselines, per-class and per-degree tables, example neighbors, auto-ubiquitination check
 python src/make_figures.py         # results/fig1_*.png, fig2_*.png
 ```
 `src/evalcore.py` holds shared helpers. All randomness uses fixed seed 0, 1,000 permutations.
@@ -33,5 +34,6 @@ python src/make_figures.py         # results/fig1_*.png, fig2_*.png
 - TRIM49D1/TRIM49D2 share accession C9J1S8 and an identical sequence; collapsed to one E3 for evaluation. LOC122513141 has no sequence and is excluded.
 
 ## Outputs in `results/`
-`pairs_dedup_human.csv`, `discrepancy_*.csv`, `sw_norm_sqrt.npy` (+ `raw`, `min`), `e3_index.csv`, `sw_evaluation.csv`,
-`sw_degree_controlled_null.csv`, `sw_by_degree_bin.csv`, `sw_per_query.csv`, `fig1_sw_vs_baselines.png`, `fig2_sensitivity.png`.
+`pairs_dedup_human.csv`, `discrepancy_*.csv`, `sw_norm_sqrt.npy` (+ `sw_norm_min.npy`, `sw_raw.npy`; rows follow `e3_index.csv`),
+`e3_index.csv`, `sw_main_neighbors.npy`, `sw_evaluation.csv`, `sw_degree_controlled_null.csv`, `sw_by_degree_bin.csv`,
+`sw_per_query.csv`, `sw_extra_analyses.txt`, `fig1_sw_vs_baselines.png`, `fig2_sensitivity.png`.

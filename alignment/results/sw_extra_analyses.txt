@@ -1,0 +1,52 @@
+POPULARITY baseline (always the most substrate-rich other E3s): {'prec@1': 0.1791, 'hit@1': 0.1791, 'prec@3': 0.2745, 'hit@3': 0.5187, 'prec@5': 0.2914, 'hit@5': 0.5802, 'prec@10': 0.2684, 'hit@10': 0.6738}
+LENGTH-matched baseline (nearest by sequence length): {'prec@1': 0.0481, 'hit@1': 0.0481, 'prec@3': 0.0499, 'hit@3': 0.1364, 'prec@5': 0.0455, 'hit@5': 0.1925, 'prec@10': 0.0511, 'hit@10': 0.3503}
+SW sqrt: prec@5=0.1417 hit@5=0.3743 | mean #substrates of top-5 neighbors=9.9 (all 8.0) | mean length of top-5 neighbors=438 (all 688)
+SW min: prec@5=0.1257 hit@5=0.3503 | mean #substrates of top-5 neighbors=9.0 (all 8.0) | mean length of top-5 neighbors=406 (all 688)
+SW raw: prec@5=0.1615 hit@5=0.4171 | mean #substrates of top-5 neighbors=11.2 (all 8.0) | mean length of top-5 neighbors=700 (all 688)
+
+By number of substrates of the query:
+         prec5   hit5   n
+deg_bin                  
+1        0.057  0.168  95
+2        0.048  0.212  66
+3-5      0.102  0.357  98
+6-10     0.163  0.519  54
+>10      0.420  0.770  61
+
+By class (n shown; classes with n<10 are noisy):
+                 prec5   hit5    n
+cls                               
+RING             0.143  0.388  196
+CRL1             0.114  0.294   51
+CRL3             0.065  0.323   31
+HECT             0.426  0.696   23
+CRL4             0.111  0.333   18
+Degenerate RING  0.118  0.412   17
+CRL5             0.027  0.133   15
+RBR              0.109  0.364   11
+Atypical         0.200  0.250    4
+CRL2; CRL5       0.050  0.250    4
+APC/C            0.400  1.000    2
+CRL1; CRL4       0.000  0.000    1
+CRL2             0.000  0.000    1
+
+By similarity of the query's closest neighbor:
+             prec5   hit5    n
+sim_bin                       
+(0.0, 0.1]   0.082  0.257  148
+(0.1, 0.2]   0.100  0.269   52
+(0.2, 0.3]   0.158  0.465   43
+(0.3, 0.5]   0.152  0.373   75
+(0.5, 1.01]  0.311  0.714   56
+
+MDM2 [RING, 84 substrates]: MDM4(0.24, 3 shared), RNF7(0.04, 0 shared), MUL1(0.04, 2 shared), RNF34(0.04, 1 shared), RNF4(0.04, 0 shared)
+FBXW7 [CRL1, 63 substrates]: FBXW11(0.19, 1 shared), BTRC(0.17, 10 shared), FBXW2(0.11, 2 shared), TRAF7(0.09, 1 shared), TBL1X(0.08, 0 shared)
+BTRC [CRL1, 111 substrates]: FBXW11(0.79, 25 shared), FBXW7(0.17, 10 shared), TRAF7(0.09, 1 shared), FBXW2(0.09, 1 shared), TBL1X(0.08, 1 shared)
+SMURF1 [HECT, 114 substrates]: SMURF2(0.73, 9 shared), WWP2(0.27, 3 shared), ITCH(0.27, 3 shared), WWP1(0.26, 8 shared), NEDD4L(0.25, 2 shared)
+TRIM25 [RING, 15 substrates]: TRIM47(0.14, 0 shared), MID1(0.11, 0 shared), TRIM65(0.11, 0 shared), TRIM39(0.11, 0 shared), TRIM8(0.10, 1 shared)
+PRKN [RBR, 69 substrates]: RNF14(0.07, 0 shared), ARIH1(0.07, 1 shared), ARIH2(0.07, 1 shared), RNF144A(0.06, 0 shared), RNF144B(0.05, 1 shared)
+CBL [RING, 65 substrates]: CBLB(0.42, 8 shared), CBLC(0.31, 2 shared), RNF5(0.05, 1 shared), RNF185(0.05, 1 shared), PEX10(0.04, 0 shared)
+
+with auto-ubiquitination pairs (main): E3s=374, pairs=2994, prec@5=0.1417, popularity-controlled null=0.0670, z=11.2
+auto-ubiquitination (E3==substrate) removed: E3s=369, pairs=2901, prec@5=0.1447, popularity-controlled null=0.0677, z=11.4
+(auto-ubiquitination pairs in the evaluation set: 93)
