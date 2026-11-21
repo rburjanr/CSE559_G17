@@ -1,5 +1,6 @@
-import numpy as np, pandas as pd
+import numpy as np
 def load():
+    import pandas as pd
     idx=pd.read_csv("results/e3_index.csv")
     pairs=pd.read_excel("data/E3_substrate_pairs_and_e3_roster.xlsx",sheet_name="Known pairs")
     pairs.columns=["e3","sub","in_roster","databases","pmids"]
